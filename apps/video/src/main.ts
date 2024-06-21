@@ -6,15 +6,14 @@ async function bootstrap() {
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(
     AppModule,
     {
-      transport: Transport.KAFKA,
+      transport: Transport.TCP,
       options: {
-        client: {
-          brokers: ['host.docker.internal:9092'],
-        },
+        host: 'video-service',
+        port: 3002,
       },
     },
   );
-  app.listen();
-  console.info(`analytics-service listening`);
+  await app.listen();
+  console.info(`video-service listening on 3002 for TCP`);
 }
 bootstrap();

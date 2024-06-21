@@ -28,13 +28,13 @@
         "tsConfigPath": "apps/user/tsconfig.app.json"
       }
     },
-    "board": {
+    "video": {
       "type": "application",
-      "root": "apps/board",
+      "root": "apps/video",
       "entryFile": "main",
-      "sourceRoot": "apps/board/src",
+      "sourceRoot": "apps/video/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/board/tsconfig.app.json"
+        "tsConfigPath": "apps/video/tsconfig.app.json"
       }
     },
     "analytics": {
